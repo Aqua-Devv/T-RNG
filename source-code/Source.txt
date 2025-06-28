@@ -1,0 +1,79 @@
+import time
+import random
+from random import randint
+spins = 0
+
+time.sleep(1)
+print("Welcome sir!")
+time.sleep(1)
+#balls
+print("What is your name eh?")
+name = input("Name : ")
+time.sleep(1)
+print()
+print(f"Well hello to the casino {name}!")
+time.sleep(1)
+print("Press enter to spin!")
+print()
+while True:
+        gmbl = input(":: ")
+        if gmbl == "":
+                spins += 1
+                spin = randint(1,1000000)
+                if spin <= 50:
+                        print()
+                        time.sleep(1)
+                        print("\033[91m[Mythical - 0.005%]\033[0m")
+
+                elif spin <= 400:
+                        print()
+                        time.sleep(1)
+                        print("\033[94m[impossible - 0.04%]\033[0m")
+
+                elif spin <= 2000:
+                        print()
+                        time.sleep(1)
+                        print("\033[96m[Legend - 0.2%]\033[0m")
+
+                elif spin <= 10000:
+                        print()
+                        time.sleep(1)
+                        print("\033[33m[Warrior - 1%]\033[0m")
+
+                elif spin <= 50000:
+                        print()
+                        time.sleep(1)
+                        print("\033[93m[Myth - 5%]\033[0m")
+
+                elif spin <= 100000:
+                        print()
+                        time.sleep(1)
+                        print("\033[95m[Epic - 10%]\033[0m")
+
+                elif spin <= 250000:
+                        print()
+                        time.sleep(1)
+                        print("\033[92m[Ehh - 25%]\033[0m")
+
+                elif spin <= 500000:
+                        print()
+                        time.sleep(1)
+                        print("\033[92m[Basic - 50%]\033[0m")
+
+                elif spin <= 850000:
+                        print()
+                        time.sleep(1)
+                        print("\033[90m[MID - 85%]\033[0m")
+
+                elif spin <= 999999:
+                        print()
+                        time.sleep(1)
+                        print("\033[90m[DOG WATER - 99.9%]\033[0m")
+
+        if gmbl == "stats":
+            time.sleep(1)
+            print()
+            print("-- PLAYER'S STATS --")
+            print(f"[ Spins : {spins} ]")
+            print(f"[ Name : {name} ]")
+            print()
